@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000
 
 injectRoutes(app);
 
-if(port !== 3000) {
+if(port === 3000) {
     db.on("open", () => {
         console.log("conexão com o banco estabelecida")
     })
