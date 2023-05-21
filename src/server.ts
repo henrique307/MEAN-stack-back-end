@@ -7,10 +7,12 @@ const port = process.env.PORT || 3000
 
 injectRoutes(app);
 
-db.on("open", () => {
-    console.log("conexão com o banco estabelecida")
-})
-
-app.listen(port, () => {
-    console.log(`app escutando em http://localhost:${port}`) 
-})
+if(port !== 3000) {
+    db.on("open", () => {
+        console.log("conexão com o banco estabelecida")
+    })
+    
+    app.listen(port, () => {
+        console.log(`app escutando em http://localhost:${port}`) 
+    })
+}
