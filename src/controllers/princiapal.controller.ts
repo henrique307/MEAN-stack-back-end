@@ -18,9 +18,9 @@ class Principal {
         const novoPrincipal = new principalModel(req.body);
 
         novoPrincipal.save({}, (erro: CallbackError) => {
-            erro 
-            ? res.status(500).send(`Princiapl nao foi criado ${erro}`)
-            : res.status(200).send(`Princiapl criado com sucesso!`);
+            erro
+            ? res.status(500).send(`Princiapal nao foi criado ${erro}`)
+            : res.status(200).send(`Princiapal criado com sucesso!`);
         })
     }
 
